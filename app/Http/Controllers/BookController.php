@@ -13,7 +13,7 @@ class BookController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        return Book::all();
+        return Book::orderByDesc('id', 'desc')->get();
     }
 
     /**
